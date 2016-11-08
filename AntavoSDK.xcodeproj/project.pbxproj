@@ -10,6 +10,7 @@
 		636FF6A11DD251F600566D74 /* AntavoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 636FF6971DD251F600566D74 /* AntavoSDK.framework */; };
 		636FF6A61DD251F600566D74 /* AntavoSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636FF6A51DD251F600566D74 /* AntavoSDKTests.swift */; };
 		636FF6A81DD251F600566D74 /* AntavoSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 636FF69A1DD251F600566D74 /* AntavoSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		636FF6B21DD253E900566D74 /* AntavoSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636FF6B11DD253E900566D74 /* AntavoSDK.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		636FF6A01DD251F600566D74 /* AntavoSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AntavoSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		636FF6A51DD251F600566D74 /* AntavoSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntavoSDKTests.swift; sourceTree = "<group>"; };
 		636FF6A71DD251F600566D74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		636FF6B11DD253E900566D74 /* AntavoSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AntavoSDK.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				636FF69A1DD251F600566D74 /* AntavoSDK.h */,
 				636FF69B1DD251F600566D74 /* Info.plist */,
+				636FF6B11DD253E900566D74 /* AntavoSDK.swift */,
 			);
 			path = AntavoSDK;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 					636FF6961DD251F600566D74 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = L3X9AF8X6D;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					636FF69F1DD251F600566D74 = {
@@ -198,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				636FF6B21DD253E900566D74 /* AntavoSDK.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +327,7 @@
 		636FF6AC1DD251F600566D74 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = L3X9AF8X6D;
@@ -335,6 +341,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = antavo.AntavoSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -342,6 +349,7 @@
 		636FF6AD1DD251F600566D74 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = L3X9AF8X6D;
@@ -362,6 +370,7 @@
 		636FF6AF1DD251F600566D74 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = L3X9AF8X6D;
 				INFOPLIST_FILE = AntavoSDKTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -374,6 +383,7 @@
 		636FF6B01DD251F600566D74 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = L3X9AF8X6D;
 				INFOPLIST_FILE = AntavoSDKTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
