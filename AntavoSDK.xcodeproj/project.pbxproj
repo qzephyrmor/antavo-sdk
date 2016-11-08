@@ -1,0 +1,415 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		636FF6A11DD251F600566D74 /* AntavoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 636FF6971DD251F600566D74 /* AntavoSDK.framework */; };
+		636FF6A61DD251F600566D74 /* AntavoSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636FF6A51DD251F600566D74 /* AntavoSDKTests.swift */; };
+		636FF6A81DD251F600566D74 /* AntavoSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 636FF69A1DD251F600566D74 /* AntavoSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		636FF6A21DD251F600566D74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 636FF68E1DD251F500566D74 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 636FF6961DD251F600566D74;
+			remoteInfo = AntavoSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		636FF6971DD251F600566D74 /* AntavoSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AntavoSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		636FF69A1DD251F600566D74 /* AntavoSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AntavoSDK.h; sourceTree = "<group>"; };
+		636FF69B1DD251F600566D74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		636FF6A01DD251F600566D74 /* AntavoSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AntavoSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		636FF6A51DD251F600566D74 /* AntavoSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntavoSDKTests.swift; sourceTree = "<group>"; };
+		636FF6A71DD251F600566D74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		636FF6931DD251F600566D74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		636FF69D1DD251F600566D74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				636FF6A11DD251F600566D74 /* AntavoSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		636FF68D1DD251F500566D74 = {
+			isa = PBXGroup;
+			children = (
+				636FF6991DD251F600566D74 /* AntavoSDK */,
+				636FF6A41DD251F600566D74 /* AntavoSDKTests */,
+				636FF6981DD251F600566D74 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		636FF6981DD251F600566D74 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				636FF6971DD251F600566D74 /* AntavoSDK.framework */,
+				636FF6A01DD251F600566D74 /* AntavoSDKTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		636FF6991DD251F600566D74 /* AntavoSDK */ = {
+			isa = PBXGroup;
+			children = (
+				636FF69A1DD251F600566D74 /* AntavoSDK.h */,
+				636FF69B1DD251F600566D74 /* Info.plist */,
+			);
+			path = AntavoSDK;
+			sourceTree = "<group>";
+		};
+		636FF6A41DD251F600566D74 /* AntavoSDKTests */ = {
+			isa = PBXGroup;
+			children = (
+				636FF6A51DD251F600566D74 /* AntavoSDKTests.swift */,
+				636FF6A71DD251F600566D74 /* Info.plist */,
+			);
+			path = AntavoSDKTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		636FF6941DD251F600566D74 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				636FF6A81DD251F600566D74 /* AntavoSDK.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		636FF6961DD251F600566D74 /* AntavoSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 636FF6AB1DD251F600566D74 /* Build configuration list for PBXNativeTarget "AntavoSDK" */;
+			buildPhases = (
+				636FF6921DD251F600566D74 /* Sources */,
+				636FF6931DD251F600566D74 /* Frameworks */,
+				636FF6941DD251F600566D74 /* Headers */,
+				636FF6951DD251F600566D74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AntavoSDK;
+			productName = AntavoSDK;
+			productReference = 636FF6971DD251F600566D74 /* AntavoSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		636FF69F1DD251F600566D74 /* AntavoSDKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 636FF6AE1DD251F600566D74 /* Build configuration list for PBXNativeTarget "AntavoSDKTests" */;
+			buildPhases = (
+				636FF69C1DD251F600566D74 /* Sources */,
+				636FF69D1DD251F600566D74 /* Frameworks */,
+				636FF69E1DD251F600566D74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				636FF6A31DD251F600566D74 /* PBXTargetDependency */,
+			);
+			name = AntavoSDKTests;
+			productName = AntavoSDKTests;
+			productReference = 636FF6A01DD251F600566D74 /* AntavoSDKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		636FF68E1DD251F500566D74 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Fekete Zsolt";
+				TargetAttributes = {
+					636FF6961DD251F600566D74 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = L3X9AF8X6D;
+						ProvisioningStyle = Automatic;
+					};
+					636FF69F1DD251F600566D74 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = L3X9AF8X6D;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 636FF6911DD251F500566D74 /* Build configuration list for PBXProject "AntavoSDK" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 636FF68D1DD251F500566D74;
+			productRefGroup = 636FF6981DD251F600566D74 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				636FF6961DD251F600566D74 /* AntavoSDK */,
+				636FF69F1DD251F600566D74 /* AntavoSDKTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		636FF6951DD251F600566D74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		636FF69E1DD251F600566D74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		636FF6921DD251F600566D74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		636FF69C1DD251F600566D74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				636FF6A61DD251F600566D74 /* AntavoSDKTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		636FF6A31DD251F600566D74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 636FF6961DD251F600566D74 /* AntavoSDK */;
+			targetProxy = 636FF6A21DD251F600566D74 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		636FF6A91DD251F600566D74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		636FF6AA1DD251F600566D74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		636FF6AC1DD251F600566D74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = L3X9AF8X6D;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AntavoSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = antavo.AntavoSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		636FF6AD1DD251F600566D74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = L3X9AF8X6D;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AntavoSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = antavo.AntavoSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		636FF6AF1DD251F600566D74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = L3X9AF8X6D;
+				INFOPLIST_FILE = AntavoSDKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = antavo.AntavoSDKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		636FF6B01DD251F600566D74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = L3X9AF8X6D;
+				INFOPLIST_FILE = AntavoSDKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = antavo.AntavoSDKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		636FF6911DD251F500566D74 /* Build configuration list for PBXProject "AntavoSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				636FF6A91DD251F600566D74 /* Debug */,
+				636FF6AA1DD251F600566D74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		636FF6AB1DD251F600566D74 /* Build configuration list for PBXNativeTarget "AntavoSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				636FF6AC1DD251F600566D74 /* Debug */,
+				636FF6AD1DD251F600566D74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		636FF6AE1DD251F600566D74 /* Build configuration list for PBXNativeTarget "AntavoSDKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				636FF6AF1DD251F600566D74 /* Debug */,
+				636FF6B01DD251F600566D74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 636FF68E1DD251F500566D74 /* Project object */;
+}
