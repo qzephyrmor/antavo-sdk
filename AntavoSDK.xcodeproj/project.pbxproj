@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		552CDA001F4B9762000741FA /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CD9FF1F4B9762000741FA /* Reward.swift */; };
+		552CDA041F4B97A9000741FA /* Exception.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CDA031F4B97A9000741FA /* Exception.swift */; };
+		552CDA081F4B97E2000741FA /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CDA071F4B97E2000741FA /* Customer.swift */; };
+		552CDA0E1F4B9923000741FA /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CDA0D1F4B9923000741FA /* Client.swift */; };
 		636FF6A11DD251F600566D74 /* AntavoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 636FF6971DD251F600566D74 /* AntavoSDK.framework */; };
 		636FF6A61DD251F600566D74 /* AntavoSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636FF6A51DD251F600566D74 /* AntavoSDKTests.swift */; };
 		636FF6A81DD251F600566D74 /* AntavoSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 636FF69A1DD251F600566D74 /* AntavoSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -24,6 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		552CD9FF1F4B9762000741FA /* Reward.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reward.swift; sourceTree = "<group>"; };
+		552CDA031F4B97A9000741FA /* Exception.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exception.swift; sourceTree = "<group>"; };
+		552CDA071F4B97E2000741FA /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		552CDA0D1F4B9923000741FA /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		636FF6971DD251F600566D74 /* AntavoSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AntavoSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		636FF69A1DD251F600566D74 /* AntavoSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AntavoSDK.h; sourceTree = "<group>"; };
 		636FF69B1DD251F600566D74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +84,10 @@
 				636FF69A1DD251F600566D74 /* AntavoSDK.h */,
 				636FF69B1DD251F600566D74 /* Info.plist */,
 				636FF6B11DD253E900566D74 /* AntavoSDK.swift */,
+				552CD9FF1F4B9762000741FA /* Reward.swift */,
+				552CDA031F4B97A9000741FA /* Exception.swift */,
+				552CDA071F4B97E2000741FA /* Customer.swift */,
+				552CDA0D1F4B9923000741FA /* Client.swift */,
 			);
 			path = AntavoSDK;
 			sourceTree = "<group>";
@@ -202,7 +214,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				552CDA041F4B97A9000741FA /* Exception.swift in Sources */,
+				552CDA001F4B9762000741FA /* Reward.swift in Sources */,
 				636FF6B21DD253E900566D74 /* AntavoSDK.swift in Sources */,
+				552CDA0E1F4B9923000741FA /* Client.swift in Sources */,
+				552CDA081F4B97E2000741FA /* Customer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +428,7 @@
 				636FF6AD1DD251F600566D74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		636FF6AE1DD251F600566D74 /* Build configuration list for PBXNativeTarget "AntavoSDKTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +437,7 @@
 				636FF6B01DD251F600566D74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
