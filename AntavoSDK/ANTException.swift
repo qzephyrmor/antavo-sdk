@@ -5,7 +5,7 @@
 //  Copyright © 2017 Antavo Ltd. All rights reserved.
 //
 
-enum Exception: Error {
+enum ANTException: Error {
     case runtimeError(String)
     case apiError(String)
 }

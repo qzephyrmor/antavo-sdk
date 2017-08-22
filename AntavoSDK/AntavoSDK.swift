@@ -91,7 +91,7 @@ open class AntavoSDK: NSObject {
             return customer
         }
         
-        throw Exception.runtimeError("No authenticated customer found")
+        throw ANTException.runtimeError("No authenticated customer found")
     }
     
     /**
@@ -196,7 +196,7 @@ open class AntavoSDK: NSObject {
             try customer = self.getAuthenticatedCustomer()
             
             // TODO: implement reward claim mechanism.
-        } catch Exception.runtimeError {
+        } catch ANTException.runtimeError {
             
         }
     }

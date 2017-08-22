@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0D078EA50583409158FCC4A9 /* Pods_AntavoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A04DB599D59DBE3234AEBE /* Pods_AntavoSDK.framework */; };
 		552CDA001F4B9762000741FA /* ANTReward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CD9FF1F4B9762000741FA /* ANTReward.swift */; };
-		552CDA041F4B97A9000741FA /* Exception.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CDA031F4B97A9000741FA /* Exception.swift */; };
+		552CDA041F4B97A9000741FA /* ANTException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CDA031F4B97A9000741FA /* ANTException.swift */; };
 		552CDA081F4B97E2000741FA /* ANTCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CDA071F4B97E2000741FA /* ANTCustomer.swift */; };
 		552CDA0E1F4B9923000741FA /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CDA0D1F4B9923000741FA /* Client.swift */; };
 		552CDA701F4C7CE7000741FA /* ANTEventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CDA6F1F4C7CE7000741FA /* ANTEventManager.swift */; };
@@ -35,7 +35,7 @@
 		08069900CF02D115FAAE6BE2 /* Pods_AntavoSDKTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AntavoSDKTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09901828EDF171CC1AED3366 /* Pods-AntavoSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntavoSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-AntavoSDK/Pods-AntavoSDK.release.xcconfig"; sourceTree = "<group>"; };
 		552CD9FF1F4B9762000741FA /* ANTReward.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ANTReward.swift; sourceTree = "<group>"; };
-		552CDA031F4B97A9000741FA /* Exception.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exception.swift; sourceTree = "<group>"; };
+		552CDA031F4B97A9000741FA /* ANTException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ANTException.swift; sourceTree = "<group>"; };
 		552CDA071F4B97E2000741FA /* ANTCustomer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ANTCustomer.swift; sourceTree = "<group>"; };
 		552CDA0D1F4B9923000741FA /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		552CDA6F1F4C7CE7000741FA /* ANTEventManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ANTEventManager.swift; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 				636FF69A1DD251F600566D74 /* AntavoSDK.h */,
 				636FF69B1DD251F600566D74 /* Info.plist */,
 				636FF6B11DD253E900566D74 /* AntavoSDK.swift */,
-				552CDA031F4B97A9000741FA /* Exception.swift */,
+				552CDA031F4B97A9000741FA /* ANTException.swift */,
 				552CDA071F4B97E2000741FA /* ANTCustomer.swift */,
 				552CD9FF1F4B9762000741FA /* ANTReward.swift */,
 				552CDA6F1F4C7CE7000741FA /* ANTEventManager.swift */,
@@ -336,7 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				552CDA041F4B97A9000741FA /* Exception.swift in Sources */,
+				552CDA041F4B97A9000741FA /* ANTException.swift in Sources */,
 				552CDA721F4C7D7D000741FA /* ANTEventManagerAction.swift in Sources */,
 				552CDA001F4B9762000741FA /* ANTReward.swift in Sources */,
 				636FF6B21DD253E900566D74 /* AntavoSDK.swift in Sources */,
