@@ -39,6 +39,18 @@ open class AntavoSDK: NSObject {
     fileprivate var settings: [String: Any]?
     
     /**
+     Stores an EventManager instance in SDK.
+     */
+    fileprivate let eventManager: ANTEventManager = ANTEventManager()
+    
+    /**
+     Returns the stored EventManager instance.
+     */
+    open func getEventManager() -> ANTEventManager {
+        return self.eventManager
+    }
+    
+    /**
      Returns the stored valid API key issued by Antavo. All requests with invalid
      API key will result in an error and the request to fail.
      */
@@ -85,14 +97,25 @@ open class AntavoSDK: NSObject {
     }
     
     /**
+     Implicitly sets the authenticated customer object into SDK.
+     */
+    open func setAuthenticationCustomer(customer: ANTCustomer) {
+        self.customer = customer
+    }
+    
+    /**
      Authenticates a loyalty customer for a SDK session.
      
      - Parameter customerId: Customer's unique identifier as string.
      */
-    open func authenticateCustomer(_ customerId: String) throws -> ANTCustomer {
-        //self.customer = try self.getCustomer(customerId)
-        //return self.customer!
-        return ANTCustomer()
+    open func authenticateCustomer(_ customerId: String, completionHandler: @escaping (ANTCustomer?, Error?) -> ()) {
+        self.getCustomer(customerId) { response, error in
+            if let customer = response {
+                self.setAuthenticationCustomer(customer: customer)
+            }
+            
+            completionHandler(response, error)
+        }
     }
 
     /**
@@ -137,17 +160,31 @@ open class AntavoSDK: NSObject {
      
      - Parameter rewardId: Reward's unique identifier.
      */
-    open func getReward(_ rewardId: String) throws -> Reward {
+    open func getReward(_ rewardId: String) throws -> ANTReward {
         // TODO: implement reward fetching mechanism.
-        return Reward()
+        return ANTReward()
     }
     
     /**
      Mechanism for fetching all rewards from Antavo API.
+     
+     - Parameter completionHandler: A completion handler function that will be 
+       invoked after fetching data from API endpoint.
      */
-    open func getRewards() throws -> [Reward] {
-        // TODO: implement rewards fetching mechanism.
-        return []
+    open func getRewards(completionHandler: @escaping ([ANTReward]?, Error?) -> ()) {
+        self.getClient().get("/rewards") { response, error in
+            if let result = response {
+                var rewards: [ANTReward] = []
+                
+                print(type(of: result))
+                print(result)
+                
+                
+                completionHandler(rewards, nil)
+            } else {
+                completionHandler(nil, error)
+            }
+        }
     }
     
     /**
