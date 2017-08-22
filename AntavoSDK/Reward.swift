@@ -8,6 +8,6 @@
 
 import UIKit
 
-public class Reward: NSObject {
+open class Reward: NSObject {
 
 }

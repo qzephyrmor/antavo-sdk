@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D078EA50583409158FCC4A9 /* Pods_AntavoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A04DB599D59DBE3234AEBE /* Pods_AntavoSDK.framework */; };
 		552CDA001F4B9762000741FA /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CD9FF1F4B9762000741FA /* Reward.swift */; };
 		552CDA041F4B97A9000741FA /* Exception.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CDA031F4B97A9000741FA /* Exception.swift */; };
-		552CDA081F4B97E2000741FA /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CDA071F4B97E2000741FA /* Customer.swift */; };
+		552CDA081F4B97E2000741FA /* ANTCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CDA071F4B97E2000741FA /* ANTCustomer.swift */; };
 		552CDA0E1F4B9923000741FA /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CDA0D1F4B9923000741FA /* Client.swift */; };
 		636FF6A11DD251F600566D74 /* AntavoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 636FF6971DD251F600566D74 /* AntavoSDK.framework */; };
 		636FF6A61DD251F600566D74 /* AntavoSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636FF6A51DD251F600566D74 /* AntavoSDKTests.swift */; };
 		636FF6A81DD251F600566D74 /* AntavoSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 636FF69A1DD251F600566D74 /* AntavoSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		636FF6B21DD253E900566D74 /* AntavoSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636FF6B11DD253E900566D74 /* AntavoSDK.swift */; };
+		8B5186B60879FCB578799A2A /* Pods_AntavoSDKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08069900CF02D115FAAE6BE2 /* Pods_AntavoSDKTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,9 +30,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08069900CF02D115FAAE6BE2 /* Pods_AntavoSDKTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AntavoSDKTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		09901828EDF171CC1AED3366 /* Pods-AntavoSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntavoSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-AntavoSDK/Pods-AntavoSDK.release.xcconfig"; sourceTree = "<group>"; };
 		552CD9FF1F4B9762000741FA /* Reward.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reward.swift; sourceTree = "<group>"; };
 		552CDA031F4B97A9000741FA /* Exception.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exception.swift; sourceTree = "<group>"; };
-		552CDA071F4B97E2000741FA /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		552CDA071F4B97E2000741FA /* ANTCustomer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ANTCustomer.swift; sourceTree = "<group>"; };
 		552CDA0D1F4B9923000741FA /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		636FF6971DD251F600566D74 /* AntavoSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AntavoSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		636FF69A1DD251F600566D74 /* AntavoSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AntavoSDK.h; sourceTree = "<group>"; };
@@ -39,6 +43,10 @@
 		636FF6A51DD251F600566D74 /* AntavoSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntavoSDKTests.swift; sourceTree = "<group>"; };
 		636FF6A71DD251F600566D74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		636FF6B11DD253E900566D74 /* AntavoSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AntavoSDK.swift; sourceTree = "<group>"; };
+		A7CC82A67686107FEE706352 /* Pods-AntavoSDKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntavoSDKTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AntavoSDKTests/Pods-AntavoSDKTests.release.xcconfig"; sourceTree = "<group>"; };
+		ABD57C307E5069BA89E0644B /* Pods-AntavoSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntavoSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AntavoSDK/Pods-AntavoSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		C3A04DB599D59DBE3234AEBE /* Pods_AntavoSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AntavoSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1F84611550721742DECDB12 /* Pods-AntavoSDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntavoSDKTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AntavoSDKTests/Pods-AntavoSDKTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D078EA50583409158FCC4A9 /* Pods_AntavoSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,18 +63,41 @@
 			buildActionMask = 2147483647;
 			files = (
 				636FF6A11DD251F600566D74 /* AntavoSDK.framework in Frameworks */,
+				8B5186B60879FCB578799A2A /* Pods_AntavoSDKTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4ECAB11F7E74DE6BBC0354C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ABD57C307E5069BA89E0644B /* Pods-AntavoSDK.debug.xcconfig */,
+				09901828EDF171CC1AED3366 /* Pods-AntavoSDK.release.xcconfig */,
+				E1F84611550721742DECDB12 /* Pods-AntavoSDKTests.debug.xcconfig */,
+				A7CC82A67686107FEE706352 /* Pods-AntavoSDKTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		530AE6DA4ECCA95240BDAD25 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3A04DB599D59DBE3234AEBE /* Pods_AntavoSDK.framework */,
+				08069900CF02D115FAAE6BE2 /* Pods_AntavoSDKTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		636FF68D1DD251F500566D74 = {
 			isa = PBXGroup;
 			children = (
 				636FF6991DD251F600566D74 /* AntavoSDK */,
 				636FF6A41DD251F600566D74 /* AntavoSDKTests */,
 				636FF6981DD251F600566D74 /* Products */,
+				4ECAB11F7E74DE6BBC0354C4 /* Pods */,
+				530AE6DA4ECCA95240BDAD25 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,7 +118,7 @@
 				636FF6B11DD253E900566D74 /* AntavoSDK.swift */,
 				552CD9FF1F4B9762000741FA /* Reward.swift */,
 				552CDA031F4B97A9000741FA /* Exception.swift */,
-				552CDA071F4B97E2000741FA /* Customer.swift */,
+				552CDA071F4B97E2000741FA /* ANTCustomer.swift */,
 				552CDA0D1F4B9923000741FA /* Client.swift */,
 			);
 			path = AntavoSDK;
@@ -119,10 +151,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 636FF6AB1DD251F600566D74 /* Build configuration list for PBXNativeTarget "AntavoSDK" */;
 			buildPhases = (
+				01CA2B44D4B6847DD8C1A157 /* [CP] Check Pods Manifest.lock */,
 				636FF6921DD251F600566D74 /* Sources */,
 				636FF6931DD251F600566D74 /* Frameworks */,
 				636FF6941DD251F600566D74 /* Headers */,
 				636FF6951DD251F600566D74 /* Resources */,
+				E584D40799840FDE16525A67 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -137,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 636FF6AE1DD251F600566D74 /* Build configuration list for PBXNativeTarget "AntavoSDKTests" */;
 			buildPhases = (
+				8377DFDFC1918DC0722FD43C /* [CP] Check Pods Manifest.lock */,
 				636FF69C1DD251F600566D74 /* Sources */,
 				636FF69D1DD251F600566D74 /* Frameworks */,
 				636FF69E1DD251F600566D74 /* Resources */,
+				53ADFFDBA5D375662EA14327 /* [CP] Embed Pods Frameworks */,
+				B18BF1019F54A83833C27F3F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,12 +201,13 @@
 					636FF6961DD251F600566D74 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = L3X9AF8X6D;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					636FF69F1DD251F600566D74 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = L3X9AF8X6D;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -209,6 +247,84 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		01CA2B44D4B6847DD8C1A157 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		53ADFFDBA5D375662EA14327 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AntavoSDKTests/Pods-AntavoSDKTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8377DFDFC1918DC0722FD43C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B18BF1019F54A83833C27F3F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AntavoSDKTests/Pods-AntavoSDKTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E584D40799840FDE16525A67 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AntavoSDK/Pods-AntavoSDK-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		636FF6921DD251F600566D74 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -218,7 +334,7 @@
 				552CDA001F4B9762000741FA /* Reward.swift in Sources */,
 				636FF6B21DD253E900566D74 /* AntavoSDK.swift in Sources */,
 				552CDA0E1F4B9923000741FA /* Client.swift in Sources */,
-				552CDA081F4B97E2000741FA /* Customer.swift in Sources */,
+				552CDA081F4B97E2000741FA /* ANTCustomer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +458,7 @@
 		};
 		636FF6AC1DD251F600566D74 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABD57C307E5069BA89E0644B /* Pods-AntavoSDK.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -364,6 +481,7 @@
 		};
 		636FF6AD1DD251F600566D74 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09901828EDF171CC1AED3366 /* Pods-AntavoSDK.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -385,6 +503,7 @@
 		};
 		636FF6AF1DD251F600566D74 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1F84611550721742DECDB12 /* Pods-AntavoSDKTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = L3X9AF8X6D;
@@ -398,6 +517,7 @@
 		};
 		636FF6B01DD251F600566D74 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7CC82A67686107FEE706352 /* Pods-AntavoSDKTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = L3X9AF8X6D;

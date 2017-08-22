@@ -13,7 +13,3 @@ FOUNDATION_EXPORT double AntavoSDKVersionNumber;
 
 //! Project version string for AntavoSDK.
 FOUNDATION_EXPORT const unsigned char AntavoSDKVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <AntavoSDK/PublicHeader.h>
-
-

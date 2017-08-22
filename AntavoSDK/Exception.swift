@@ -9,5 +9,6 @@
 import UIKit
 
 enum Exception: Error {
-    case RuntimeError(String)
+    case runtimeError(String)
+    case apiError(String)
 }
