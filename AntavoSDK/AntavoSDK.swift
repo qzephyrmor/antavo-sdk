@@ -160,9 +160,14 @@ open class AntavoSDK: NSObject {
      
      - Parameter rewardId: Reward's unique identifier.
      */
-    open func getReward(_ rewardId: String) throws -> ANTReward {
-        // TODO: implement reward fetching mechanism.
-        return ANTReward()
+    open func getReward(_ rewardId: String, completionHandler: @escaping (ANTReward?, Error?) -> ()) {
+        self.getClient().get("/rewards/\(rewardId)") { response, error in
+            if let result = response {
+                completionHandler(ANTReward().assign(data: result), error)
+            } else {
+                completionHandler(nil, error)
+            }
+        }
     }
     
     /**
@@ -175,10 +180,6 @@ open class AntavoSDK: NSObject {
         self.getClient().get("/rewards") { response, error in
             if let result = response {
                 var rewards: [ANTReward] = []
-                
-                print(type(of: result))
-                print(result)
-                
                 
                 completionHandler(rewards, nil)
             } else {
