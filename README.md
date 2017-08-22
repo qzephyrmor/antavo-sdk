@@ -60,9 +60,9 @@ let antavo = AntavoSDK("YOUR_API_KEY")
 The following methods will present API responses asynchronously. We recommend using Swift completion handler capabilities.
 See [Completion Handlers](https://thatthinginswift.com/completion-handlers) for more information on getting started with Swift completion handlers.
 
-### Getting brand settings from API
+### Getting brand settings
 
-Usage:
+Mechanism for fetching initialized brand settings.
 
 ```swift
 antavo.getSettings() { response, error in
@@ -70,6 +70,34 @@ antavo.getSettings() { response, error in
 }
 ```
 
-Completion handler parameters:
-- response: `NSDictionary?`
-- error: `Error?`
+Return values:
+- response: brand settings as `NSDictionary?`
+- error: API errors as `Error?`
+
+### Getting customer data
+
+Capability to getting customer data by given identifier.
+
+```swift
+antavo.getCustomer("CUSTOMER_ID") { customer, error in
+  // Implement your application behavior...
+}
+```
+
+Return values:
+- customer: customer object as `ANTCustomer?`
+- error: API errors as `Error?`
+
+### Authenticating customer
+
+Mechanism for authenticating an already existing loyalty customer for a SDK session.
+
+```swift
+antavo.authenticateCustomer("CUSTOMER_ID") { customer, error in
+  // Implement your application behavior...
+}
+```
+
+Return values:
+- customer: authenticated customer as `ANTCustomer?`
+- error: API errors as `Error?`
