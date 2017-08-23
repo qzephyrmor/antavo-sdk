@@ -102,13 +102,22 @@ Return values:
 - customer: authenticated customer as `ANTCustomer?`
 - error: API errors as `Error?`
 
-### Sending event
+### Sending event for an authenticated customer
 
 Mechanism for performing a POST request through the Antavo Events API.
 
 ```swift
-try antavo.sendEvent("point_add", parameters: parameters) { response, error in
-  // Implement your applicaiton behavior...
+// Defining request parameters.
+let parameters = ["points": 30]
+
+sdk.authenticateCustomer("bence5") { customer, error in
+  do {
+    try sdk.sendEvent("point_add", parameters: parameters) { response, error in
+      // Implement your application behavior...
+    }
+  } catch {
+    // Implement your error handler mechanism...
+  }
 }
 ```
 
