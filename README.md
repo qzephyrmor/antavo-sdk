@@ -133,9 +133,9 @@ Mechanism for performing a POST request through the Antavo Events API.
 // Defining request parameters.
 let parameters = ["points": 30]
 
-sdk.getCustomer("CUSTOMER_ID") { customer, error in
+antavo.getCustomer("CUSTOMER_ID") { customer, error in
   if let customerObject = customer {
-    sdk.getClient().postEvent("point_add", customer: customerObject, parameters: parameters) { response, error in
+    antavo.getClient().postEvent("point_add", customer: customerObject, parameters: parameters) { response, error in
       // Implement your application behavior...
     }
   }
