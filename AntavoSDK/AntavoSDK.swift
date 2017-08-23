@@ -140,9 +140,18 @@ open class AntavoSDK: NSObject {
      - Parameter customerId: Customer unique identifier.
      - Parameter properties: Customer properties as associative collection.
      */
-    open func registerCustomer(_ customerId: String, properties: [String: Any] = [:]) throws -> ANTCustomer {
-        // TODO: implement customer registration mechanism.
-        return ANTCustomer()
+    open func registerCustomer(_ customerId: String, properties: [String: Any] = [:], completionHandler: @escaping (ANTCustomer?, Error?) -> ()) {
+        // Preparing a new customer object.
+        let customer: ANTCustomer = ANTCustomer()
+        customer.id = customerId
+        
+        self.getClient().postEvent("opt_in", customer: customer, parameters: properties) { response, error in
+            if let customer = response {
+                completionHandler(ANTCustomer().assign(data: customer), error)
+            } else {
+                completionHandler(nil, error)
+            }
+        }
     }
     
     /**
@@ -152,7 +161,12 @@ open class AntavoSDK: NSObject {
      - Parameter parameters: Custom data (key-value pairs) to store with the event.
      */
     open func sendEvent(_ action: String, parameters: [String: Any] = [:], completionHandler: @escaping (NSDictionary?, Error?) -> ()) throws {
-        try self.getClient().postEvent(action, customer: self.getAuthenticatedCustomer(), parameters: parameters, completionHandler: completionHandler)
+        try self.getClient().postEvent(
+            action,
+            customer: self.getAuthenticatedCustomer(),
+            parameters: parameters,
+            completionHandler: completionHandler
+        )
     }
     
     /**
@@ -192,15 +206,17 @@ open class AntavoSDK: NSObject {
      Mechanism for claiming a reward in Antavo.
      
      - Parameter rewardId: Reward's unqiue identifier.
+     - Parameter parameters: Custom data (key-value pairs) to store with the event.
      */
-    open func claimReward(_ rewardId: String) throws {
-        do {
-            try customer = self.getAuthenticatedCustomer()
-            
-            // TODO: implement reward claim mechanism.
-        } catch ANTException.runtimeError {
-            
-        }
+    open func claimReward(rewardId: String, parameters: [String: Any] = [:], completionHandler: @escaping (NSDictionary?, Error?)  -> ()) throws {
+        var request: [String: Any] = [:]
+        request["customer"] = try self.getAuthenticatedCustomer().id!
+        
+        self.getClient().post(
+            "/rewards/\(rewardId)/claim",
+            parameters: request,
+            completionHandler: completionHandler
+        )
     }
     
     /**
