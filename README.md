@@ -110,7 +110,7 @@ Mechanism for performing a POST request through the Antavo Events API.
 // Defining request parameters.
 let parameters = ["points": 30]
 
-sdk.authenticateCustomer("bence5") { customer, error in
+sdk.authenticateCustomer("CUSTOMER_ID") { customer, error in
   do {
     try sdk.sendEvent("point_add", parameters: parameters) { response, error in
       // Implement your application behavior...
