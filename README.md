@@ -74,6 +74,26 @@ Return values:
 - response: brand settings as `NSDictionary?`
 - error: API errors as `Error?`
 
+### Registering a customer
+
+Mechanism for registering a loyalty customer through the Antavo API.
+
+```swift
+let properties = [
+  "first_name": "John",
+  "last_name": "Doe",
+  "email": "jdoe@somewhere.org"
+]
+        
+antavo.registerCustomer("CUSTOMER_ID", properties: properties) { customer, error in
+  // Implement your application behavior...
+}
+```
+
+Return values:
+- customer: customer object as `ANTCustomer?`
+- error: API errors as `Error?`
+
 ### Getting customer data
 
 Capability to getting customer data by given identifier.
@@ -102,16 +122,92 @@ Return values:
 - customer: authenticated customer as `ANTCustomer?`
 - error: API errors as `Error?`
 
-### Sending event
+### Sending event for an authenticated customer
 
 Mechanism for performing a POST request through the Antavo Events API.
 
 ```swift
-try antavo.sendEvent("point_add", parameters: parameters) { response, error in
-  // Implement your applicaiton behavior...
+// Defining request parameters.
+let parameters = ["points": 30]
+
+antavo.authenticateCustomer("CUSTOMER_ID") { customer, error in
+  do {
+    try antavo.sendEvent("point_add", parameters: parameters) { response, error in
+      // Implement your application behavior...
+    }
+  } catch {
+    // Implement your error handler mechanism...
+  }
 }
 ```
 
 Return values:
 - response: Events API response as `NSDictionary?`
 - error: API errors as `Error?`
+
+### Sending event for a non-authenticated customer
+
+Mechanism for performing a POST request through the Antavo Events API.
+
+```swift
+// Defining request parameters.
+let parameters = ["points": 30]
+
+antavo.getCustomer("CUSTOMER_ID") { customer, error in
+  if let customerObject = customer {
+    antavo.getClient().postEvent("point_add", customer: customerObject, parameters: parameters) { response, error in
+      // Implement your application behavior...
+    }
+  }
+}
+```
+
+Return values:
+- response: Events API response as `NSDictionary?`
+- error: API errors as `Error?`
+
+### Getting reward list
+
+Mechanism for fetching all rewards from Antavo API.
+
+```swift
+antavo.getRewards() { rewards, error
+  // Implement your application behavior...      
+}
+```
+
+Return values:
+- rewards: array of `ANTReward?` objects
+- error: API errors as `Error?`
+
+### Getting a reward data
+
+Mechanism for fetching a reward entry by specified identifier from Antavo API.
+
+```swift
+antavo.getReward("REWARD_ID") { reward, error in
+  // Implement your application behavior...
+}
+```
+
+Return values:
+- reward: response as `ANTReward?` object
+- error: API error as `Error?`
+
+### Claim a reward with authenticated customer
+
+Mechanism for claiming a reward in Antavo.
+
+```swift
+do {
+  try antavo.claimReward(rewardId: "REWARD_ID") { response, error in
+    // Implement your application behavior...
+  }
+} catch {
+  // Implement your error handler mechanism...
+}
+```
+
+Return values:
+- response: Events API response as `NSDictionary?`
+- error: API error as `Error?`
