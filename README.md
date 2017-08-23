@@ -211,3 +211,20 @@ do {
 Return values:
 - response: Events API response as `NSDictionary?`
 - error: API error as `Error?`
+
+## SDK Internal Events
+Custom event listeners allow us to separate our concerns and prevent function call spaghetti. We can keep the event agnostic while we add and remove functionality.
+
+### Events
+
+<details>
+  <summary>init</summary>
+  <p>Data: -</p>
+  <p>Triggered: When SDK has been initialized or reinitialized.</p>
+</details>
+
+<details>
+  <summary>customerAuthenticated</summary>
+  <p>data: Customer object as <i>ANTCustomer</i>.</p>
+  <p>triggered: When authenticated customer has been stored.</p>
+</details>
