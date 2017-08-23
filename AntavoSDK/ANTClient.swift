@@ -129,10 +129,32 @@ open class ANTClient: NSObject {
             .request(self.prepareUrl(url), method: .post, parameters: self.prepareParameters(parameters))
             .responseJSON { response in
                 switch response.result {
-                    case .success(let value):
-                        completionHandler(value as? NSDictionary, nil)
-                    case .failure(let error):
-                        completionHandler(nil, error)
+                case .success(let value):
+                    if let result = value as? NSDictionary {
+                        if let errorObject = result.object(forKey: "error") {
+                            var errorMessage = "Unexpected error message"
+                            var errorCode = 3000
+                            
+                            // Defining an error message for NSError object.
+                            if let errors = errorObject as? NSDictionary {
+                                errorMessage = errors.object(forKey: "message") as! String
+                                errorCode = errors.object(forKey: "code") as! Int
+                            }
+                            
+                            completionHandler(nil, self.createClientError(code: errorCode, value: errorMessage))
+                        } else {
+                            completionHandler(result, nil)
+                        }
+                    } else if let result = value as? NSArray {
+                        let dictionary: NSMutableDictionary = NSMutableDictionary()
+                        dictionary.setObject(result, forKey: "data" as NSCopying)
+                        
+                        completionHandler(dictionary, nil)
+                    } else {
+                        completionHandler(nil, self.createClientError(code: 3001, value: "Non parsable API response"))
+                    }
+                case .failure(let error):
+                    completionHandler(nil, error)
                 }
             }
     }
