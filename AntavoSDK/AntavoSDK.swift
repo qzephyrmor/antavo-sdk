@@ -195,6 +195,14 @@ open class AntavoSDK: NSObject {
             if let result = response {
                 var rewards: [ANTReward] = []
                 
+                if let rewardObjects = result.object(forKey: "data") as? NSArray {
+                    for rewardObject in rewardObjects {
+                        if let data = rewardObject as? NSDictionary {
+                            rewards.append(ANTReward().assign(data: data))
+                        }
+                    }
+                }
+                
                 completionHandler(rewards, nil)
             } else {
                 completionHandler(nil, error)

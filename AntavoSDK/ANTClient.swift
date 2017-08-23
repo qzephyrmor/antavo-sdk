@@ -52,6 +52,32 @@ open class ANTClient: NSObject {
     }
     
     /**
+     Returns an array of NSLocalizedDescriptionKey objects for NSError handler.
+     
+     - Parameter value: Error message as string.
+     */
+    open func getLocalizedDescription(value: String) -> [AnyHashable: Any] {
+        return [
+            NSLocalizedDescriptionKey: NSLocalizedString("ANTClient Error", value: value, comment: ""),
+            NSLocalizedFailureReasonErrorKey: NSLocalizedString("ANTClient Error", value: value, comment: "")
+        ]
+    }
+    
+    /**
+     Returns an NSError object with error code and localized error descriptions.
+     
+     - Parameter code: Error code specified as integer.
+     - Parameter value: Error message specified as string.
+     */
+    open func createClientError(code: Int, value: String) -> NSError {
+        return NSError(
+            domain: "AntavoSDKANTClient",
+            code: code,
+            userInfo: self.getLocalizedDescription(value: value)
+        )
+    }
+    
+    /**
      Performs a GET request to the specified URL with given parameters.
      
      - Parameter url: Relative URL to the base API URL.
@@ -63,7 +89,29 @@ open class ANTClient: NSObject {
             .responseJSON { response in
                 switch response.result {
                     case .success(let value):
-                        completionHandler(value as? NSDictionary, nil)
+                        if let result = value as? NSDictionary {
+                            if let errorObject = result.object(forKey: "error") {
+                                var errorMessage = "Unexpected error message"
+                                var errorCode = 3000
+                                
+                                // Defining an error message for NSError object.
+                                if let errors = errorObject as? NSDictionary {
+                                    errorMessage = errors.object(forKey: "message") as! String
+                                    errorCode = errors.object(forKey: "code") as! Int
+                                }
+                                
+                                completionHandler(nil, self.createClientError(code: errorCode, value: errorMessage))
+                            } else {
+                                completionHandler(result, nil)
+                            }
+                        } else if let result = value as? NSArray {
+                            let dictionary: NSMutableDictionary = NSMutableDictionary()
+                            dictionary.setObject(result, forKey: "data" as NSCopying)
+                            
+                            completionHandler(dictionary, nil)
+                        } else {
+                            completionHandler(nil, self.createClientError(code: 3001, value: "Non parsable API response"))
+                        }
                     case .failure(let error):
                         completionHandler(nil, error)
                 }
