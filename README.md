@@ -228,3 +228,17 @@ Custom event listeners allow us to separate our concerns and prevent function ca
   <p>data: Customer object as <i>ANTCustomer</i>.</p>
   <p>triggered: When authenticated customer has been stored.</p>
 </details>
+
+### Usage
+
+```swift
+antavo.getEventManager().listenTo(eventName: "init", action: {
+  // Implement your application behavior...
+})
+```
+
+### Custom event dispatching
+
+```swift
+self.getEventManager().trigger(eventName: "YOUR_EVENT_NAME")
+```
