@@ -74,6 +74,26 @@ Return values:
 - response: brand settings as `NSDictionary?`
 - error: API errors as `Error?`
 
+### Registering a customer
+
+Mechanism for registering a loyalty customer through the Antavo API.
+
+```swift
+let properties = [
+  "first_name": "John",
+  "last_name": "Doe",
+  "email": "jdoe@somewhere.org"
+]
+        
+antavo.registerCustomer("CUSTOMER_ID", properties: properties) { customer, error in
+  // Implement your application behavior...
+}
+```
+
+Return values:
+- customer: customer object as `ANTCustomer?`
+- error: API errors as `Error?`
+
 ### Getting customer data
 
 Capability to getting customer data by given identifier.
