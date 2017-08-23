@@ -52,7 +52,7 @@ You will need to provide an Antavo API key for initializing Swift SDK, for examp
 
 ```swift
 import AntavoSDK
-let antavo = AntavoSDK("YOUR_API_KEY")
+let antavo = AntavoSDK(apiKey: "YOUR_API_KEY")
 ```
 
 ## SDK Reference
@@ -100,4 +100,18 @@ antavo.authenticateCustomer("CUSTOMER_ID") { customer, error in
 
 Return values:
 - customer: authenticated customer as `ANTCustomer?`
+- error: API errors as `Error?`
+
+### Sending event
+
+Mechanism for performing a POST request through the Antavo Events API.
+
+```swift
+try antavo.sendEvent("point_add", parameters: parameters) { response, error in
+  // Implement your applicaiton behavior...
+}
+```
+
+Return values:
+- response: Events API response as `NSDictionary?`
 - error: API errors as `Error?`
