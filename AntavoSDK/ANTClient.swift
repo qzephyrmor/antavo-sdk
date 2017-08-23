@@ -52,29 +52,6 @@ open class ANTClient: NSObject {
     }
     
     /**
-     Parses API JSON response into a generic NSDictionary object.
-     
-     - Parameter response: Antavo API response in JSON format.
-     */
-    open func parseResponse(_ response: String) -> NSDictionary? {
-        var dictonary: NSDictionary?
-        
-        if let data = response.data(using: String.Encoding.utf8) {
-            do {
-                dictonary = try JSONSerialization.jsonObject(with: data, options: []) as? [String:AnyObject] as NSDictionary?
-                
-                if let parsed = dictonary {
-                    return parsed
-                }
-            } catch let error as NSError {
-                print(error)
-            }
-        }
-        
-        return nil
-    }
-    
-    /**
      Performs a GET request to the specified URL with given parameters.
      
      - Parameter url: Relative URL to the base API URL.
