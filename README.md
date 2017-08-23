@@ -1,6 +1,8 @@
 # Antavo Loyalty Swift SDK
 
 ![](https://img.shields.io/cocoapods/p/AFNetworking.svg)
+[![Version](https://img.shields.io/cocoapods/v/AntavoLoyaltySDK.svg?style=flat)](http://cocoapods.org/pods/AntavoLoyaltySDK)
+[![CI Status](http://img.shields.io/travis/qzephyrmor/AntavoLoyaltySDK.svg?style=flat)](https://travis-ci.org/qzephyrmor/AntavoLoyaltySDK)
 
 ## Overview
 
