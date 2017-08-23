@@ -110,6 +110,8 @@ open class AntavoSDK: NSObject {
         self.getCustomer(customerId) { response, error in
             if let customer = response {
                 self.setAuthenticationCustomer(customer: customer)
+                
+                self.getEventManager().trigger(eventName: "customerAuthenticated", data: customer)
             }
             
             completionHandler(response, error)
@@ -208,6 +210,10 @@ open class AntavoSDK: NSObject {
      */
     public init(apiKey: String = "") {
         self.apiKey = apiKey
+        
+        super.init()
+        
+        self.getEventManager().trigger(eventName: "init")
     }
     
     /**
@@ -218,6 +224,9 @@ open class AntavoSDK: NSObject {
     open func reinitialize(_ apiKey: String) -> AntavoSDK {
         self.apiKey = apiKey
         self.client = ANTClient(apiKey: self.getApiKey())
+        
+        self.getEventManager().trigger(eventName: "init")
+        
         return self
     }
 }
