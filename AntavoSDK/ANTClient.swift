@@ -8,7 +8,7 @@
 import Alamofire
 
 // MARK: AntavoSDKClient
-open class Client: NSObject {
+open class ANTClient: NSObject {
     /**
      Specifies Antavo base API url.
      */

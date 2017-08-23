@@ -24,7 +24,7 @@ open class AntavoSDK: NSObject {
     /**
      Cached REST client for communicating with Antavo API.
      */
-    fileprivate var client: Client?
+    fileprivate var client: ANTClient?
     
     /**
      Stores the initialized Antavo Customer object.
@@ -67,12 +67,12 @@ open class AntavoSDK: NSObject {
     /**
      Returns the cached REST client for communicating with Antavo API.
      */
-    open func getClient() -> Client {
+    open func getClient() -> ANTClient {
         if let client = self.client {
             return client
         }
         
-        self.client = Client(apiKey: self.getApiKey())
+        self.client = ANTClient(apiKey: self.getApiKey())
         return self.client!
     }
     
@@ -217,7 +217,7 @@ open class AntavoSDK: NSObject {
      */
     open func reinitialize(_ apiKey: String) -> AntavoSDK {
         self.apiKey = apiKey
-        self.client = Client(apiKey: self.getApiKey())
+        self.client = ANTClient(apiKey: self.getApiKey())
         return self
     }
 }
