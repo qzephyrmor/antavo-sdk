@@ -44,7 +44,23 @@ $ pod install
 
 ### Installing Swift SDK
 
-Coming soon.
+AntavoLoyaltySDK is available through CocoaPods. To install it, simply add the following line to your Podfile:
+
+```bash
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
+use_frameworks!
+
+target '<Your Target Name>' do
+    pod 'AntavoLoyaltySDK', '~> 1.0.1'
+end
+```
+
+Then, run the following command:
+
+```bash
+$ pod install
+```
 
 ## Initialization
 
