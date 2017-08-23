@@ -121,10 +121,11 @@ open class ANTClient: NSObject {
      */
     open func postEvent(_ action: String, customer: ANTCustomer, parameters: [String: Any] = [:], completionHandler: @escaping (NSDictionary?, Error?) -> ()) {
         // Appending given action and customer's id to the request parameters.
-        var request = parameters
+        var request: [String: Any] = [:]
         request["action"] = action
         request["customer"] = customer.id
+        request["data"] = parameters
         
-        self.post(self.eventsApiURL, parameters: self.prepareParameters(request), completionHandler: completionHandler)
+        self.post("/events", parameters: self.prepareParameters(request), completionHandler: completionHandler)
     }
 }

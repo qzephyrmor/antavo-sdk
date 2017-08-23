@@ -150,7 +150,7 @@ open class AntavoSDK: NSObject {
      - Parameter parameters: Custom data (key-value pairs) to store with the event.
      */
     open func sendEvent(_ action: String, parameters: [String: Any] = [:], completionHandler: @escaping (NSDictionary?, Error?) -> ()) throws {
-        try self.getClient().postEvent(action, customer: self.getAuthenticatedCustomer(), completionHandler: completionHandler)
+        try self.getClient().postEvent(action, customer: self.getAuthenticatedCustomer(), parameters: parameters, completionHandler: completionHandler)
     }
     
     /**
