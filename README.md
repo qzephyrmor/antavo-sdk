@@ -22,7 +22,7 @@ There are many resources to help you build your first loyalty application with t
 
 ### Installing dependencies
 
-We recommend using CocoaPods to manage dependecies and build the Swift SDK for your application.
+We recommend using CocoaPods to manage dependencies and build the Swift SDK for your application.
 
 You can install CocoaPods with:
 
@@ -96,7 +96,7 @@ Return values:
 
 ### Getting customer data
 
-Capability to getting customer data by given identifier.
+Capability of getting customer data by given identifier.
 
 ```swift
 antavo.getCustomer("CUSTOMER_ID") { customer, error in
