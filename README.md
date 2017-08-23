@@ -145,3 +145,49 @@ antavo.getCustomer("CUSTOMER_ID") { customer, error in
 Return values:
 - response: Events API response as `NSDictionary?`
 - error: API errors as `Error?`
+
+### Getting reward list
+
+Mechanism for fetching all rewards from Antavo API.
+
+```swift
+antavo.getRewards() { rewards, error
+  // Implement your application behavior...      
+}
+```
+
+Return values:
+- rewards: array of `ANTReward?` objects
+- error: API errors as `Error?`
+
+### Getting a reward data
+
+Mechanism for fetching a reward entry by specified identifier from Antavo API.
+
+```swift
+antavo.getReward("REWARD_ID") { reward, error in
+  // Implement your application behavior...
+}
+```
+
+Return values:
+- reward: response as `ANTReward?` object
+- error: API error as `Error?`
+
+### Claim a reward with authenticated customer
+
+Mechanism for claiming a reward in Antavo.
+
+```swift
+do {
+  try antavo.claimReward(rewardId: "REWARD_ID") { response, error in
+    // Implement your application behavior...
+  }
+} catch {
+  // Implement your error handler mechanism...
+}
+```
+
+Return values:
+- response: Events API response as `NSDictionary?`
+- error: API error as `Error?`
